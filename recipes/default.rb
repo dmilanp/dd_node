@@ -7,7 +7,7 @@ apt_package "zsh"
 
 bash "zsh default shell for vagrant" do
     command <<-EOF
-    sed '/^vagrant/s_/bin/bash_/usr/bin/zsh_' /etc/passwd
+    sed -i '/^vagrant/s_/bin/bash_/usr/bin/zsh_' /etc/passwd
     echo 'ZSH_THEME="robbyrussell"' | tee -a /home/vagrant/.zshrc
     EOF
 end
