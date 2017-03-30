@@ -3,7 +3,7 @@ apt_update "update packages" do
     action  :update
 end
 
-%w{zsh tree}.each do |pkg|
+%w{git zsh tree}.each do |pkg|
     apt_package pkg
 end
 
